@@ -11,9 +11,9 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<AVAudioPlayerDelegate>
-@property (nonatomic ,strong) JTNumberScrollAnimatedView *socreTensDigitAnimation;
-@property (nonatomic ,strong) JTNumberScrollAnimatedView *socreDigitAnimation;
-@property (nonatomic ,strong) JTNumberScrollAnimatedView *socreAnimation;
+@property (nonatomic ,strong) LNNumberScrollAnimatedView *socreTensDigitAnimation;
+@property (nonatomic ,strong) LNNumberScrollAnimatedView *socreDigitAnimation;
+@property (nonatomic ,strong) LNNumberScrollAnimatedView *socreAnimation;
 @property (nonatomic, strong) NSMutableArray *playerArr;
 @property (nonatomic, strong) AVAudioPlayer *numberPlayer;
 @end
@@ -35,7 +35,7 @@
     CGSize textSize = [@"9" sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:textFont,NSFontAttributeName, nil]];
 
     //个位十位单独设置,可分别设定各自速度
-    JTNumberScrollAnimatedView *socreTensDigitAnimation = [[JTNumberScrollAnimatedView alloc] initWithFrame:CGRectMake(100, 100, textSize.width, textSize.height)];
+    LNNumberScrollAnimatedView *socreTensDigitAnimation = [[LNNumberScrollAnimatedView alloc] initWithFrame:CGRectMake(100, 100, textSize.width, textSize.height)];
     socreTensDigitAnimation.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:socreTensDigitAnimation];
     socreTensDigitAnimation.textColor = [UIColor redColor];
@@ -49,7 +49,7 @@
     socreTensDigitAnimation.durationOffset = 0.1;
     self.socreTensDigitAnimation = socreTensDigitAnimation;
     
-    JTNumberScrollAnimatedView *socreDigitAnimation = [[JTNumberScrollAnimatedView alloc] initWithFrame:CGRectMake(100+textSize.width, 100, textSize.width, textSize.height)];
+    LNNumberScrollAnimatedView *socreDigitAnimation = [[LNNumberScrollAnimatedView alloc] initWithFrame:CGRectMake(100+textSize.width, 100, textSize.width, textSize.height)];
     socreDigitAnimation.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:socreDigitAnimation];
     socreDigitAnimation.textColor = [UIColor redColor];
@@ -66,7 +66,7 @@
     
     //个位十位统一设置,速度一样,可设置结束时间间隔差
     CGSize scoreTextSize = [@"19" sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:textFont,NSFontAttributeName, nil]];
-    JTNumberScrollAnimatedView *socreAnimation = [[JTNumberScrollAnimatedView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(socreDigitAnimation.frame)+textSize.width, 100, scoreTextSize.width*1.1, scoreTextSize.height)];
+    LNNumberScrollAnimatedView *socreAnimation = [[LNNumberScrollAnimatedView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(socreDigitAnimation.frame)+textSize.width, 100, scoreTextSize.width*1.1, scoreTextSize.height)];
     socreAnimation.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:socreAnimation];
     socreAnimation.textColor = [UIColor blueColor];

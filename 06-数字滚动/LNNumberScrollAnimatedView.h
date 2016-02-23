@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JTNumberScrollAnimatedView : UIView
+@interface LNNumberScrollAnimatedView : UIView
 
 @property (strong, nonatomic) NSNumber *value;/**<最后显示的值*/
 @property (strong, nonatomic) UIColor *textColor;/**<文本颜色*/

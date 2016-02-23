@@ -7,7 +7,7 @@
 
 #import "LNNumberScrollAnimatedView.h"
 
-@interface JTNumberScrollAnimatedView(){
+@interface LNNumberScrollAnimatedView(){
     NSMutableArray *numbersText;
     NSMutableArray *scrollLayers;
     NSMutableArray *scrollLabels;
@@ -15,7 +15,7 @@
 
 @end
 
-@implementation JTNumberScrollAnimatedView
+@implementation LNNumberScrollAnimatedView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
